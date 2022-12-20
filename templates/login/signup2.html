@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/signup/{{name}}" method="post">
+        <h2>
+            <input type="hidden" name="name" value="{{name}}">
+        </h2>
+        <h2>Membership level:</h2>
+        <ul>
+            <li>
+                Bronze
+                <input type="checkbox" name="bronze">
+            </li>
+            <li>
+                Silver
+                <input type="checkbox" name="silver">
+            </li>
+            <li>
+                Gold
+                <input type="checkbox" name="gold">
+            </li>
+            <li>
+                Platinum
+                <input type="checkbox" name="platinum">
+            </li>
+            <li>
+                Diamond
+                <input type="checkbox" name="diamond">
+            </li>
+        </ul>
+        <h2>gender:</h2>
+            <ul>
+                <li>
+                    Male
+                    <input type="checkbox" name="M">
+                </li>
+                <li>
+                    Female
+                    <input type="checkbox" name="F">
+                </li>
+            </ul>
+        <h2>availability</h2>
+        <ul>
+            <li>
+                Monday
+                <input type="checkbox" name="mon">
+            </li>
+            <li>
+                Tuesday
+                <input type="checkbox" name="tue">
+            </li>
+            <li>
+                Wednesday
+                <input type="checkbox" name="wed">
+            </li>
+            <li>
+                Thursday
+                <input type="checkbox" name="thu">
+            </li>
+            <li>
+                Friday
+                <input type="checkbox" name="fri">
+            </li>
+            <li>
+                Saturday
+                <input type="checkbox" name="sat">
+            </li>
+            <li>
+                Sunday
+                <input type="checkbox" name="sun">
+            </li>
+        </ul>
+        <h2>salary</h2>
+        <input type="text" name="salary">
+        <input type="submit" value="Signup">
+    </form>
+
+</body>
+</html>

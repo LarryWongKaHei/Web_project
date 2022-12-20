@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body class="login">
+    <div class="main">
+      <p class="sign" align="center">Sign up</p>
+      <form class="form1" action="/signup" method="post">
+        <input class="un " type="text" name="name" align="center" placeholder="Name">
+        <input class="un " type="text" name="username" align="center" placeholder="Username">
+        <input class="pass" type="password" name="password" align="center" placeholder="Password">
+        <input type="submit" class="submit" align="center" value="Next">
+                  
+      </div>
+       
+  </body>
+  {% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <ul>
+        <li>
+            <h2>Name:</h2>
+            {{the_class.name}}
+        </li>
+        <li>
+            <h2>Fee:</h2>
+            {{the_class.fee}}
+        </li>
+        <li>
+            <h2>Tutor_gender:</h2>
+            {{the_class.tutor_gender}}
+        </li>
+        <li>
+            <h2>Availability:</h2>
+            {{the_class.availability.strip("{}")}}
+        </li>
+        <li>
+            <h2>Duration:</h2>
+            {{the_class.duration}}
+        </li>
+        <li>
+            <h2>Max_capacity:</h2>
+            {{the_class.max_capacity}}
+        </li>
+    </ul>
+{% endblock %}

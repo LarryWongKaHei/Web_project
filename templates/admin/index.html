@@ -1,0 +1,36 @@
+{% extends "admin/base.html" %}
+
+{% block admin %}
+    <h2>Today's Classes</h2>
+    {% for class in classes %}
+    <ul>
+        <li>
+            <h3>class name:</h3>
+            {{class.name}}
+            <h4>Max_capacity</h4>
+            {{class.max_capacity}}
+            <h4>Joined members:</h4>
+            {% for name in dict_list %}
+                <p>
+                    {{name[class.name]}}
+                </p>
+            {% endfor %}
+        </li>
+    </ul>
+    {% endfor %}
+    <h2>Members checked-in</h2>
+    {% for member in members %}
+        {% if member.status %}
+            <ul>
+                <li>
+                    <h3>Member name:</h3>
+                    {{member.name}}
+                    <h4>Membership_level</h4>
+                    {{member.membership_level}}
+                </li>
+            </ul>
+        {% endif %}
+
+    {% endfor %}
+
+{% endblock %}

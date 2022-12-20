@@ -1,0 +1,25 @@
+{% extends "admin/base.html" %}
+
+{% block admin %}
+    <form action="/admin/show_classes/{{classes.name}}" method="post">
+        <h2>Class name:</h2>
+        {{classes.name}}
+        <h2>Class fee:</h2>
+        {{classes.fee}}
+        <h2>Class tutor's gender:</h2>
+        {{classes.tutor_gender}}
+        <h2>Class availability:</h2>
+        {% for day in classes.availability.strip("{}").split(",") %}
+            <li>
+                {{day}}
+            </li>
+        {% endfor %}
+        <h2>Class duration:</h2>
+        {{classes.duration}}
+        <h2>Class max capacity:</h2>
+        {{classes.max_capacity}}
+        <br>
+        <input type="submit" name="button" value="Delete">
+        <input type="submit" name="button" value="Edit">
+    </form>
+{% endblock %}

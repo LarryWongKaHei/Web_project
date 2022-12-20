@@ -1,0 +1,12 @@
+{% extends "admin/base.html" %}
+
+{% block admin %}
+    {% for class in classes %}
+    <ul>
+        <li>
+            <h2>{{class.name}}</h2>
+            <a href="/admin/show_classes/{{class.name}}">Show detail</a>
+        </li>
+    </ul>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/admin.css') }}">
+    <title>Admin</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <div class="menu">
+                <li>
+                    <a href="/admin">Home</a>
+                </li>
+                <li>
+                    <a href="/admin/show_classes">Show all class</a>
+                </li>
+                <li>
+                    <a href="/admin/add_class">Add class</a>
+                </li>
+                <li>
+                    <a href="/admin/show_members">Show all members</a>
+                </li>
+                <li>
+                    <a href="/">Log out</a>
+                </li>
+            </div>
+        </ul>
+    </nav>
+    {% block admin %}
+
+    {% endblock %}
+</body>
+</html>

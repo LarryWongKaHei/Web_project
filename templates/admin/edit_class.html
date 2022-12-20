@@ -1,0 +1,55 @@
+{% extends "admin/base.html" %}
+
+{% block admin %}
+    <form action="/admin/show_classes/edit/{{classes.name}}" method="post">
+        <h2>Old class name:</h2>
+
+        <input type="text" name="name" placeholder="New class name" value="{{classes.name}}">
+        <h2>Old class fee:</h2>
+        <input type="text" name="fee" placeholder="New fee" value="{{classes.fee}}">
+        <h2>Old class tutor's gender:</h2>
+        <input type="text" name="gender" placeholder="New class tutor's gender" value="{{classes.tutor_gender}}">
+        <h2>Old class availability:</h2>
+        {% for day in classes.availability.strip("{}").split(",") %}
+            <li>
+                {{day}}
+            </li>
+        {% endfor %}
+        <ul>
+            <li>
+                Monday
+                <input type="checkbox" name="mon">
+            </li>
+            <li>
+                Tuesday
+                <input type="checkbox" name="tue">
+            </li>
+            <li>
+                Wednesday
+                <input type="checkbox" name="wed">
+            </li>
+            <li>
+                Thursday
+                <input type="checkbox" name="thu">
+            </li>
+            <li>
+                Friday
+                <input type="checkbox" name="fri">
+            </li>
+            <li>
+                Saturday
+                <input type="checkbox" name="sat">
+            </li>
+            <li>
+                Sunday
+                <input type="checkbox" name="sun">
+            </li>
+        </ul>
+        <h2>Old class duration:</h2>
+        <input type="text" name="duration" placeholder="New duration" value="{{classes.duration}}">
+        <h2>Old class max capacity:</h2>
+        <input type="text" name="capacity" placeholder="New capacity" value="{{classes.max_capacity}}">
+        <br>
+        <input type="submit" value="Confirm">
+    </form>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<ul>
+    <li>
+        <h3>Name:</h3>
+        {{member.name}}
+    </li>
+    <li>
+        <h3>Membership_level:</h3>
+        {{member.membership_level}}
+    </li>
+    <li>
+        <h3>Gender:</h3>
+        {{member.gender}}
+    </li>
+    <li>
+        <h3>Availability:</h3>
+        {{member.availability.strip("{}")}}
+    </li>
+    <li>
+        <h3>Salary:</h3>
+        {{member.salary}}
+    </li>
+</ul>
+{% endblock %}

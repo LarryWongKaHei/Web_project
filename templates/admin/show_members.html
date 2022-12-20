@@ -1,0 +1,16 @@
+{% extends "/admin/base.html" %}
+
+{% block admin %}
+    {% for member in members %}
+    <ul>
+        <li>
+            <h2>Member's name:</h2>
+            {{member.name}}
+            <h4>Member's membership_level:</h4>
+            {{member.membership_level}}
+            <br>
+            <a href="/admin/show_member/{{member.name}}">Show details</a>
+        </li>
+    </ul>
+    {% endfor %}
+{% endblock %}

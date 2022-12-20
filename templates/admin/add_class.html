@@ -1,0 +1,50 @@
+{% extends "admin/base.html" %}
+
+{% block admin %}
+    <form action="/admin/add_class" method="post">
+        <h2>New class name:</h2>
+        <input type="text" name="name" placeholder="New class name">
+        <h2>New class fee:</h2>
+        <input type="text" name="fee" placeholder="New fee">
+        <h2>New class tutor's gender:</h2>
+        <input type="text" name="gender" placeholder="New class tutor's gender">
+        <h2>New class availability:</h2>
+        <ul>
+            <li>
+                Monday
+                <input type="checkbox" name="mon">
+            </li>
+            <li>
+                Tuesday
+                <input type="checkbox" name="tue">
+            </li>
+            <li>
+                Wednesday
+                <input type="checkbox" name="wed">
+            </li>
+            <li>
+                Thursday
+                <input type="checkbox" name="thu">
+            </li>
+            <li>
+                Friday
+                <input type="checkbox" name="fri">
+            </li>
+            <li>
+                Saturday
+                <input type="checkbox" name="sat">
+            </li>
+            <li>
+                Sunday
+                <input type="checkbox" name="sun">
+            </li>
+        </ul>
+        <h2>New class duration:</h2>
+        <input type="text" name="duration" placeholder="New duration">
+        <h2>New class max capacity:</h2>
+        <input type="text" name="capacity" placeholder="New capacity">
+        <br>
+        <input type="submit" value="Add">
+    </form>
+
+{% endblock %}
